@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "C:\opencv\build\include\opencv2\core\core.hpp"
+#include "C:\opencv\build\include\opencv2\highgui\highgui.hpp"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -17,6 +19,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_btn_image_clicked()
 {
     QString filename = QFileDialog::getOpenFileName(this,tr("Wybierz "), "", tr("Obrazy (*.png *.jpg *.jpeg"));
+    cv::Mat image = cv::imread(filename.toStdString());
     if (QString::compare(filename, QString()) != 0)
     {
         QImage image;
@@ -32,5 +35,11 @@ void MainWindow::on_btn_image_clicked()
             // Error handling
         }
     }
+}
+
+
+void MainWindow::on_pushButton_clicked()
+{
+
 }
 

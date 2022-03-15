@@ -1,7 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "C:\opencv\build\include\opencv2\core\core.hpp"
+#include "C:\opencv\build\include\opencv2\core.hpp"
 #include "C:\opencv\build\include\opencv2\highgui\highgui.hpp"
+#include "C:\opencv\build\include\opencv2\opencv.hpp"
+#include "C:\opencv\build\include\opencv2\imgcodecs\imgcodecs.hpp"
+#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)

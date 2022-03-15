@@ -3,6 +3,9 @@ QT       += core gui
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
+CONFIG += opencv
+CONFIG -= app_bundle
+
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -27,5 +30,7 @@ win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../opencv/build/x64/vc1
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../opencv/build/x64/vc15/lib/ -lopencv_world455d
 else:unix: LIBS += -L$$PWD/../../opencv/build/x64/vc15/lib/ -lopencv_world455
 
-INCLUDEPATH += $$PWD/../../opencv/build/include
-DEPENDPATH += $$PWD/../../opencv/build/include
+INCLUDEPATH += $$PWD\..\..\opencv\build\include
+DEPENDPATH += $$PWD\..\..\opencv\build\include
+
+

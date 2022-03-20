@@ -11,10 +11,13 @@ QT_END_NAMESPACE
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-
+public slots:
+    void DisplayImage();
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    QImage imdisplay;
+    QTimer* Timer;
 
 private slots:
     void on_btn_image_clicked();

@@ -34,3 +34,10 @@ INCLUDEPATH += $$PWD\..\..\opencv\build\include
 DEPENDPATH += $$PWD\..\..\opencv\build\include
 
 
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../opencv/build/x64/vc15/lib/ -lopencv_world455
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../opencv/build/x64/vc15/lib/ -lopencv_world455d
+else:unix: LIBS += -L$$PWD/../../opencv/build/x64/vc15/lib/ -lopencv_world455
+
+INCLUDEPATH += $$PWD/../../opencv/sources/include
+DEPENDPATH += $$PWD/../../opencv/sources/include
